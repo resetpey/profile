@@ -1,18 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자바스크립트 입문 01</title>
+    <title>자바스크립트 리팩토링(2)</title>
+ <link rel="stylesheet" href="test02.css" rel="stylesheet">
 </head>
 <body>
-    <script>
-        document.write("<h1>hello world</h1>");
+    <h1>출석부<div id="clock"></div></h1>
 
-        console.log("Hello world");
+   <script>
+    /*document.write("<table>");
+    document.write("<colgroup><col style='width: 100px;'><col style=''></colgroup>");
+    document.write("<tr><td>No</td><td>이름</td></tr>");
+    document.write("<tbody id='list'><tbody>");*/
 
-        let name = prompt("이름을 입력하세요");
-        document.write(name + "입니다. 안녕하세요.");
-    </script>
+            let tableRows = "";
+
+            for(let hakbun = 1; hakbun <= 14; hakbun++){
+                let myname = prompt(`
+                ${hakbun}번 학생 이름을 입력하세요
+                `);
+                tableRows+=`
+                    <tr>
+                        <td>${hakbun}</td>
+                        <td id='mynamepo${hakbun}'></td>
+                    </tr>
+                    `;
+
+            }
+
+
+            document.getElementById("list").innerHTML = tableRows;
+            
+            document.write("</table>");
+        </script>
+    </table>
+    <script src="test01new.js"></script>
 </body>
 </html>
