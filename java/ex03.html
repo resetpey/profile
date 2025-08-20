@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+</head>
+<body>
+    <script>
+        let a=10; //number형 값을 할당
+        let b=3;
+
+        console.log("덧셈 a+b :", a+b);
+        console.log("뺄셈 a-b :", a-b);
+        console.log("곱셈 a*b :", a*b);
+        console.log("나눗셈 a/b :", a/b);
+        console.log("나머지 a%b :", a%b);
+
+        let numTest01 = Number('123'); //123 문자 매개변수, 123의 문자값을 숫자로 변환 후 함수를 정의한 것
+        console.log("Number('123') 호출 : ", numTest01)
+        let numTest02  = Number(123); //123
+        console.log("Number('123') 호출 : ", numTest02) //숫자 -> 숫자, 
+        let numTest03 = Number('123ABC'); //123ABC 문자 매개변수
+        console.log("Number('123ABC')호출 : ", numTest03);// Not a Number, ABC는 Number()가 숫자로 변환할 수 없음
+
+        let parseIntTest01 = parseInt('123'); //123 문자 매개변수
+        console.log("parseInt('123') 호출 : ", parseIntTest01); // 123
+        let parseIntTest02 = parseInt('123.45'); //123 문자 매개변수
+        console.log("parseInt('123.45') 호출 : ", parseIntTest02); // 123 문자값을 오직 정수로만 변환하였기 때문에 실수형인 .45는 출력X
+        let parseIntTest03 = parseInt('123ABC'); //123 문자 매개변수
+        console.log("parseInt('123ABC') 호출 : ", parseIntTest03); // 123, 문자값을 오직 정수로만 변환하였기 때문에 문자인 ABC를 제외한 정수 123 을 출력
+
+        let parseFloatTest01 = parseFloat('123'); //123 문자 매개변수, 문자열을 실수 숫자로 변환
+        console.log("parseFloat('123') 호출 : ", parseFloatTest01); // 123, 실수형은 정수도 포함이기 때문에 정상 출력
+        let parseFloatTest02 = parseFloat('123.45'); //123 문자 매개변수
+        console.log("parseFloat('123.45') 호출 : ", parseFloatTest02); // 123.45, 실수형인 .45 을 포함하여 출력
+        let parseFloatTest03 = parseFloat('123ABC'); //123 문자 매개변수
+        console.log("parseFloat('123ABC') 호출 : ", parseFloatTest03); //123, parseFloat은 문자열을 실수 숫자로만 변환하였기 때문에 문자열 중 인 ABC 는 출력 대상에서 제외
+
+        let StringTest01 = String(123); //123 문자 매개변수, 숫자 및 논리형 값
+        console.log("String(123) 호출 : ", StringTest01);
+        let StringTest02 = String('True'); //123 문자 매개변수
+        console.log("String('true') 호출 : ", StringTest02);
+
+        let BooleanTest01 = Boolean(1); //123 문자 매개변수
+        console.log("Boolean(1) 호출 : ", BooleanTest01);
+        let BooleanTest02 = Boolean(0); //123 문자 매개변수
+        console.log("Boolean(0) 호출 : ", BooleanTest02);
+        let BooleanTest03 = Boolean('ABC'); //123 문자 매개변수
+        console.log("Boolean('ABC') 호출 : ", BooleanTest03);
+        let BooleanTest04 = Boolean(''); //123 문자 매개변수
+        console.log("Boolean('') 호출 : ", BooleanTest04);
+    </script>
+</body>
+</html>
