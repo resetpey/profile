@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+</head>
+<body>
+    <script>
+
+        /* 자료형 변환 함수 연습 */
+         let numTest01 = Number('123'); //123 문자 매개변수, 123의 문자값을 숫자로 변환 후 함수를 정의한 것
+        console.log("Number('123') 호출 : ", numTest01)
+        let numTest02  = Number(123); //123
+        console.log("Number('123') 호출 : ", numTest02) //숫자 -> 숫자, 
+        let numTest03 = Number('123ABC'); //123ABC 문자 매개변수
+        console.log("Number('123ABC')호출 : ", numTest03);// Not a Number, ABC는 Number()가 숫자로 변환할 수 없음
+
+        /* 521p ~ 522p 자료형 변환 함수 연습 */
+
+        /*산술 연산자*/
+        let a=10; //number형 값을 할당
+        let b=3;
+
+        console.log("덧셈 a+b :", a+b);
+        console.log("뺄셈 a-b :", a-b);
+        console.log("곱셈 a*b :", a*b);
+        console.log("나눗셈 a/b :", a/b);
+        console.log("나머지 a%b :", a%b);
+
+        // *** 현재의 값을 먼저 사용하고, 그 후에 증가/감소 됨 ***
+        console.log("a++ :", a++);
+        // a = 10; a 가 console.log 출력
+        // a = 11; a 가 +1 증가
+        // 증가연산자 a++ 의미 a=a+1; a를 1증가시키고, 그 값을 a에 재할당
+        // 증가연산자 후위증가 ((a) 사용 -> 구문실행 -> 증가)
+        console.log("a-- :", a--);
+        // a = 10; a 가 console.log 출력
+        // a = 11; a 가 -1 증가
+        // 증가연산자 a-- 의미 a=a-1; a를 1감소시키고, 그 값을 a에 재할당
+        // 감소연산자 후위감소 ((a) 사용 -> 구문실행 -> 감소소)
+
+        // *** 값을 먼저 증가/감소 시키고 증가/감소된 값이 연산에 사용됨 ***
+        console.log("++a :", ++a);
+        // 증가연산자 전위증가 (증가 -> (a) 사용 -> 구문실행)
+        console.log("--a :", --a);
+        // 감소연산자 전위감소 (감소 -> (a) 사용 -> 구문실행)
+
+
+        // [퀴즈1]
+        console.log("====================[퀴즈1]==============")
+        let abc = 0;
+        
+        while(++abc < 5){
+            // 1. ++ : abc = abc + 1
+            // 2. abc == 1, abc == 2, abc == 3, abc == 4
+            // 3. <
+            // 4. 5
+            console.log("++abc:",abc); //abc == 1, abc == 2, abc == 3, abc == 4
+        }
+
+        // [퀴즈2]
+        console.log("====================[퀴즈2]==============")
+        let def = 0;
+        
+        while(def++ < 5){
+            // 1. abc == 0
+            // 2. <
+            // 3. 5
+            // 4. ++ : abc = abc + 1
+            console.log("def++:",def); //def == 1, def == 2, def == 3, def == 4, def == 5
+        }
+       
+        /* 할당 연산자 ========================================== */
+        let x = 5; // 변수 x 에 5를 대입/할당
+
+        x = x + 3;
+        //x += 3;
+        console.log("x 계산값 :", x);
+
+        let y = 5; // 변수 x 에 5를 대입/할당
+
+        y = y - 2;
+        //y -= 2;
+        console.log("y 계산값 :", y);
+
+        //z *= 5 -> z = z * 5;
+        //q /= 5 -> q = q / 5;
+        //t %= 5 -> t = t % 5;
+
+        /* 비교 연산자 =============================*/
+        let num = 5;
+        let str = "5";
+
+        //console.log("num = str :", num = str); // 문자 5 를 num 변수에 재할당
+        //console.log(typeof num); // 문자 5
+        console.log("num == str :", num == str); // true (값만 비교)
+        console.log("num === str :", num === str); // false (값, 타입 비교)
+        console.log("num != str:", num != str); // false (값만 비교)
+        // num 숫자 5, str 문자 5 => true
+        console.log("num !== str:", num !== str); // true (값, 타입 비교)
+        // num 숫자 5, str 문자 5 => false
+        console.log("num > 3:", num > 3); //true  
+        console.log("num < 3:", num < 3);  //false
+        console.log("num >= 3:", num >= 3);  //false
+        console.log("num <= 3:", num <= 3);  //true
+
+        /* 논리 연산자 =================================*/
+        let a1 = true;
+        let a2 = false;
+
+        console.log("a1 && a2 :", a1 && a2); // [AND] 둘다 true 일때 true
+        console.log("a1 || a2 :", a1 || a2); // [OR] 둘중에 하나라도 true 일때 true
+        console.log("!a1 :", !a1); // [NOT] 반대
+
+        /* 조건(삼항) 연산자 ================================*/
+        let xVal = 10;
+        let yVal = 20;
+
+        let max = (xVal > yVal)?xVal:yVal;
+        //         조건(비교) ? true 면 실행 : false 면 실행
+
+        //[퀴즈3]
+        let age=18;
+        
+        let age2 = (age >= 19) ? "성년입니다" : "미성년자입니다";
+        console.log("판정된 값은 : ", age2);
+        
+       </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1부터 5까지 더한 값 구하기</title>
+</head>
+<body>
+            <!--function abc(매개변수){
+        }
+
+        for(초기값, 조건값(최종값), 증가/감소){
+        }
+
+        abc(인수 argument); //호출
+-->
+        <!--
+        1부터 5까지 더한값 구하기
+        (조건1) 함수를 1개 이상 사용합니다.
+        (조건1) for 문을 사용합니다.
+        (조건1) 후위증가값을 사용합니다.
+        (조건1) 축약형 증가식을 사용합니다.
+        (조건5) HTML 문서내에 '1부터 5까지 더하면 ** 입니다' (리터럴 표기`` 표기)
+        -->
+    <script>
+        let sum = 0;
+        function abc() {
+            for (let i = 1; i <= 5; i++) {
+                sum += i;
+            }
+            document.write(`1부터 5까지 더하면 ${sum}입니다.`);
+        }
+
+        abc();
+
+
+        
+    </script>
+</body>
+</html>
