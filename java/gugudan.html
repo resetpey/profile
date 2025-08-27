@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 2단~9단단</title>
+    <style>
+        /* table */
+        table{width: 100%; border-collapse:collapse;border: 1px solid red; margin-bottom: 20px;}
+        td{border:1px dotted red;}
+        
+        /* flex Case */
+        .flexWrap{clear: both;display:flex;border: 1px solid blue; margin-bottom: 20px;}
+        .flexlayout{padding:5px;border: 1px dotted blue;}        
+        
+        /* floating Case */
+        .wrap{width: 100%;border: 1px solid; margin-bottom: 20px;}
+        .wrap::after{content:"";display:block;clear:both;}
+        .danlayout{float: left;padding: 5px;border: 1px dotted #000;}
+
+    </style>
+</head>
+<body><!-- table Case -->
+    <!--
+    <table>
+        <tr>
+            <td>단 * 숫자 =단*숫자</td>
+            <td>단 * 숫자 =단*숫자</td>
+            <td>단 * 숫자 =단*숫자</td>
+        </tr>
+    </table>-->
+    <!-- //table Case -->
+    <script>
+        //a 단을 표시하는 숫자
+        // flex case
+        document.write("<table><tr>")
+        for (let a = 2; a <= 9; a++) {
+            document.write("<td>")
+            //i 단마다 곱해줄 숫자
+            for (let i = 1; i <= 9; i++) {
+                document.write(`${a} X ${i} = ${a * i} <br>`);
+            }
+            document.write("</td>") 
+        }
+        document.write("</tr></table>")
+    </script> 
+
+    <!--flex Case -->
+    <!--
+    <div class="flexWrap">
+        <div class="flexlayout"></div>
+    </div>
+    -->
+    <!--//flex Case -->
+    <!--
+    <div>
+    <div class="danlayout"></div>
+    </div>
+    -->
+  
+    <script>
+        //a 단을 표시하는 숫자
+        // flex case
+        document.write("<div class='flexWrap'>")
+        for (let a = 2; a <= 9; a++) {
+            document.write("<div class='flexlayout'>")
+            //i 단마다 곱해줄 숫자ㅔ
+            for (let i = 1; i <= 9; i++) {
+                document.write(`${a} X ${i} = ${a * i} <br>`);
+            }
+            document.write("</div>") 
+        }
+        document.write("</div>")
+    </script>   
+    
+    <script>
+        // floating Case
+        //a 단을 표시하는 숫자
+        document.write("<div class='wrap'>")
+        for (let a = 2; a <= 9; a++) {
+            document.write("<div class='danlayout'>")
+            //i 단마다 곱해줄 숫자ㅔ
+            for (let i = 1; i <= 9; i++) {
+                document.write(`${a} X ${i} = ${a * i} <br>`);
+            }
+            document.write("</div>") 
+        }
+        document.write("</div>")   
+    </script>
+</body>
+</html>
