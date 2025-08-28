@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz2</title>
+</head>
+<body>
+    <script> let number = parseInt(prompt('숫자를 입력하세요'));
+        let textValue = confirm("리턴값을 확인해주세요");
+        console.log(textValue);
+
+        let confirmT = true;
+        let confirmF = false;
+
+        
+        
+       
+        if(textValue == confirmF){
+                    console.log("취소하셨습니다.");
+        }
+        else{console.log("확인하셨습니다.");
+            document.write("<h1>4의 배수일까 아닐까</h1>");
+            if(number % 4 === 0){
+                document.write(`<p>${number}는 4의 배수입니다.</p>`);
+            }
+            else {
+                document.write(`<p>${number}는 4의 배수가 아닙니다.</p>`)
+            }
+        }
+        
+    </script>
+</body>
+</html>
