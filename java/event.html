@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트트</title>
+    <style>
+        ul{display: flex; list-style-type: none; gap: 5px;}
+        ul li{padding:10px 20px; border: 1px solid #000;}
+        #result{height: 300px; border: solid red;}
+    </style>
+</head>
+<body>
+    <!--
+    <ul>
+        <li><a href="#" onclick="alert('green 버튼을 눌렀습니다.')">green</a></li>
+        <li><a href="#" onclick="alert('orange 버튼을 눌렀습니다.')">orange</a></li>
+        <li><button onclick="alert('purple 버튼을 눌렀습니다.')">purple</button></li>
+    </ul>
+    -->
+        <ul>
+        <li><a href="#" onclick="changeBg('green')">green</a></li>
+        <li><a href="#" onclick="changeBg('orange')">orange</a></li>
+        <li><button onclick="changeBg('purple')">purple</button></li>
+    </ul>
+    <div id="result"></div>
+    <script>
+        function changeBg(color){
+            let result = document.querySelector('#result'); // 메소드(Action 정의되어 있는 함수) 
+            result.style.backgroundColor = color //프로퍼티(상태 정의되어 있는 값)
+        }
+    </script>
+</body>
+</html>

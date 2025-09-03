@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명함수</title>
+</head>
+<body>
+    <script>
+        /*
+        (매개변수)=>{함수내용}
+        */
+
+        // 익명함수
+        const hi = function(){
+            return "안녕하세요";
+        }
+
+        console.log(hi());
+
+        // 매개변수없는 화살표함수
+        const hi2 = () => {return "화살표함수 : 안녕하세요?"};
+        console.log(hi2());
+
+        // 함수내용이 한줄일 경우 return, {} 생략가능
+        const hi3 = () => "함수한줄 화살표함수 : 안녕하세요!!!";
+
+        // 매개변수가 한개일 경우
+        let hi4 = function(user1){
+            document.write(`매개변수활용 : ${user1} 님, 안녕하세요~<br><br>`);
+        }
+        //hi4(prompt("이름"));
+
+        // 매개변수가 한개이 경우 화살표함수
+        const hi5 = (user2) => {document.write(`매개변수한개일 경우 화살표함수 : ${user2} 님, 안녕하세요~`)};
+        //hi5(prompt("매개변수한개일 경우 화살표함수 이름"));
+
+        //매개변수가 두개일 경우
+        let sum1 = function(a,b){
+            return a+b;
+        }
+        //alert(sum1(100,200));
+
+        // 매개변수가 두개일 경우 화살표함수
+        let sum2 = (a,b) => a + b;
+        alert(sum2(100,300));
+    </script>
+</body>
+</html>
